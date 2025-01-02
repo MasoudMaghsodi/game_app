@@ -156,42 +156,24 @@ class _CustomGameButtonState extends State<CustomGameButton> {
         duration: const Duration(milliseconds: 100),
         margin: const EdgeInsets.all(4.5),
         decoration: BoxDecoration(
-          color: widget.backgroundColor,
-          borderRadius: BorderRadius.circular(widget.borderRadius),
-          boxShadow: _isPressed
-              ? []
-              : [
-                  BoxShadow(
-                    color: widget.shadowColor.withValues(alpha: 0.6),
-                    offset: const Offset(1, 2),
-                    blurRadius: 5,
-                  ),
-                ],
-          border: _isPressed
-              ? null
-              : Border(
-                  top: BorderSide(
+            color: widget.backgroundColor,
+            borderRadius: BorderRadius.circular(widget.borderRadius),
+            boxShadow: _isPressed
+                ? []
+                : [
+                    BoxShadow(
+                      color: widget.shadowColor.withValues(alpha: 0.6),
+                      offset: const Offset(1, 2),
+                      blurRadius: 5,
+                    ),
+                  ],
+            border: _isPressed
+                ? null
+                : Border.all(
                     color: Colors.black38,
                     width: 1.5,
                     style: BorderStyle.solid,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black38,
-                    width: 1.5,
-                    style: BorderStyle.solid,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black38,
-                    width: 1.5,
-                    style: BorderStyle.solid,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black38,
-                    width: 1.5,
-                    style: BorderStyle.solid,
-                  ),
-                ),
-        ),
+                  )),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
